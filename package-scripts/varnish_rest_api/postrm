@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Perform necessary varnish_rest_api removal steps
+# after package is uninstalled.
+#
+
+echo "varnish_rest_api has been uninstalled!"
+
+exit 0

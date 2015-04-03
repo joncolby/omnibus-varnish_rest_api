@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Perform necessary varnish_rest_api setup steps
+# before package is installed.
+#
+
+echo "You're about to install varnish_rest_api!"
