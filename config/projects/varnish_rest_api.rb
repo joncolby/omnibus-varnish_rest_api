@@ -1,5 +1,5 @@
 #
-# Copyright 2015 YOUR NAME
+# Copyright 2015 Jonathan Colby
 #
 # All Rights Reserved.
 #
@@ -26,3 +26,10 @@ dependency "version-manifest"
 
 exclude "**/.git"
 exclude "**/bundler/git"
+
+package :deb do
+  vendor 'Jonathan Colby'
+  license 'MIT'
+  priority 'extra'
+  section 'ruby'
+end
