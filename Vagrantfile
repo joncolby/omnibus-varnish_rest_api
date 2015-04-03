@@ -69,7 +69,21 @@ config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y git
     sudo apt-get install -y ruby1.9.3
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-    curl -sSL https://get.rvm.io | bash -s stable --ruby
+    if [ ! -e /home/vagrant/.rvm/bin/rvm ]; then
+        gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+        curl -sSL https://get.rvm.io | bash -s stable --ruby
+    else
+	echo "rvm already exists. not installing"
+    fi
+
+    OMNIBUS_SOFTWARE=/home/vagrant/omnibus-software
+    if [ ! -e $OMNIBUS_SOFTWARE  ] ; then
+	git clone https://github.com/chef/omnibus-software.git $OMNIBUS_SOFTWARE
+    fi
+
+    OMNIBUS_REPO=/home/vagrant/omnibus-varnish_rest_api
+    if [ ! -e $OMNIBUS_REPO ] ; then
+	git clone https://github.com/joncolby/omnibus-varnish_rest_api.git $OMNIBUS_REPO
+    fi
 SHELL
 end
