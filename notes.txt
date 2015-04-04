@@ -3,6 +3,8 @@
 https://github.com/chef/omnibus
 https://github.com/chef/omnibus/blob/master/docs/Building%20on%20Debian.md
 
+# prepare build environment
+bundle install
 # tagging for package versioning
 git tag -a 0.0.8 -m "release 0.0.8"
 # building
