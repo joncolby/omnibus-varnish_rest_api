@@ -90,6 +90,7 @@ build do
     "--without-debug",
     "--without-normal", # AIX doesn't like building static libs
     "--enable-overwrite",
+    "--with-default-terminfo-dir=/usr/share/terminfo",
     "--enable-widec",
     "--without-cxx-binding",
   ]
@@ -109,6 +110,7 @@ build do
     "--without-debug",
     "--without-normal",
     "--enable-overwrite",
+    "--with-default-terminfo-dir=/usr/share/terminfo",
     "--without-cxx-binding",
   ]
 

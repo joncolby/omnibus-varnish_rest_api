@@ -9,6 +9,8 @@ bundle install
 git tag -a 0.0.8 -m "release 0.0.8"
 # building
 rvmsudo -s omnibus build varnish_rest_api --log-level debug
+# clean
+rvmsudo -s omnibus clean varnish_rest_api --log-level debug
 
 # workaround ncurses build error, set
 --with-default-terminfo-dir=/usr/share/terminfo
