@@ -1,5 +1,5 @@
 name "varnish_rest_api"
-default_version "0.0.12"
+default_version "0.0.15"
 
 dependency "ruby"
 dependency "rubygems"
